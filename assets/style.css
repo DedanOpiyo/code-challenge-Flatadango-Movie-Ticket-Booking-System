@@ -1,0 +1,117 @@
+/* assets/style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightgrey;
+    color: #333;
+  }
+  
+  header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  main {
+    margin: 20px;
+    display: flex;
+    border: 1px solid blue;
+    justify-content: space-between;
+    gap: 2%;
+  }
+
+  /* --DIV created through js-- */
+  main div#listOfMovies div {
+    padding: 0.5rem;
+    background-color: lightgrey;
+    color: #0000FF;
+  }
+
+  main div#moviePoster {
+    /* display: none; */
+    margin-bottom: 20px;
+    background-color: #f4f4f9;
+  }
+
+  /* --IMG created through js-- */
+  div#moviePoster img { /*LATER*/
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  main div#availableTickets {
+    /* display: none; */
+    /* background-color: crimson; */
+    background-color: #f4f4f9;
+    border: ipx solid black;
+  }
+
+  main div#availableTickets div#remainingTicketsCapacity::after {
+    content: ' remaining tickets';
+  }
+
+  #confirmationDiv {
+    display: flex;
+
+    width: 100vw;
+    height: 100vh;
+    margin-top: 10px;
+    color: rgb(94, 97, 97);
+    border: 1px solid red;
+    z-index: 100;
+  }
+
+  #deleteConfirmation {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100vw;
+    height: 50vh;
+    margin-top: 10px;
+    color: azure;
+  }
+
+  #holdConfirmationBtnsAndMessage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    width: 50vw;
+    height: 40vw;
+    margin-top: auto;
+    opacity: 90%;
+    background-color: #333;
+    border: 1px solid black;
+  }
+
+  #confirmationMessage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #holdConfirmationBtns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: azure;
+  }
+
+  #cancelButton {
+    color: black;
+  }
+
+  #confirmButton {
+    color: red;
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+  }
+  
