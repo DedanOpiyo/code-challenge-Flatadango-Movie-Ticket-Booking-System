@@ -110,3 +110,4 @@ Sold Out Status: Mark films as sold out by changing the button text to "Sold Out
 - **POST /tickets**: Log a new ticket purchase.
 - **DELETE /films/:id**: Delete a film from the server.
 
+**Reminder**: Incase of clogs, restart the server. Run: `json-server --watch db.json`

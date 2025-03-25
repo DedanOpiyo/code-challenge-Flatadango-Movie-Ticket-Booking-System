@@ -12,13 +12,14 @@ body {
     padding: 10px;
     text-align: center;
   }
-  
+
+
   main {
     margin: 20px;
     display: flex;
-    border: 1px solid blue;
     justify-content: space-between;
     gap: 2%;
+    height: 100%;
   }
 
   /* --DIV created through js-- */
@@ -29,38 +30,95 @@ body {
   }
 
   main div#moviePoster {
-    /* display: none; */
     margin-bottom: 20px;
-    background-color: #f4f4f9;
+    background-color: lightgrey;
   }
 
   /* --IMG created through js-- */
-  div#moviePoster img { /*LATER*/
+  div#moviePoster img { 
     object-fit: contain;
     max-width: 100%;
     max-height: 100%;
   }
 
   main div#availableTickets {
-    /* display: none; */
-    /* background-color: crimson; */
+    display: flex;
+    flex-direction: column;
     background-color: #f4f4f9;
-    border: ipx solid black;
+    border: 1px solid lightgrey;
+    height: 29em;
+    border-radius: 4px;
+    width: 30%;
+  }
+
+  main div#availableTickets #holdMovieTitle {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    opacity: 90%;
+    height: 3em;
+  }
+
+  main div#availableTickets #holdMovieTitle #movieTitle {
+    color: white;
+  }
+
+  main div#availableTickets #holdMovieTitle #movieRuntime {
+    margin-top: .5em;
+    color: #0000FF;
+  }
+  main div#availableTickets #holdMovieTitle #movieRuntime::after {
+    content: ' minutes';
+  }
+
+
+  main div#availableTickets #movieDescription {
+    margin-top: .5em;
+    margin-left: 1em;
+  }
+
+  main div#availableTickets #holdTimeAndTicketsRemaining {
+    display: flex;
+    flex-direction: row;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    margin-left: 1em;
+  }
+
+  main div#availableTickets #holdTimeAndTicketsRemaining #showTime {
+    background-color: lightgrey;
+    padding: 5px;
+  }
+
+  main div#availableTickets #holdTimeAndTicketsRemaining #remainingTicketsCapacity {
+    padding: 5px;
   }
 
   main div#availableTickets div#remainingTicketsCapacity::after {
     content: ' remaining tickets';
   }
 
+  main div#availableTickets #buyTicketsBtn {
+    background-color: rgb(241, 150, 117);
+    padding: 7px;
+    margin-left: 1em;
+    border-radius: 4px;
+    color: white;
+    border: none;
+    height: 2.5em;
+    cursor: pointer;
+  }
+
   #confirmationDiv {
     display: flex;
+    flex-direction: column;
 
-    width: 100vw;
+    /* width: 100; */
     height: 100vh;
     margin-top: 10px;
     color: rgb(94, 97, 97);
-    border: 1px solid red;
     z-index: 100;
+    position: relative;
   }
 
   #deleteConfirmation {
@@ -71,6 +129,8 @@ body {
     height: 50vh;
     margin-top: 10px;
     color: azure;
+    position: absolute;
+    margin-top: 3em;
   }
 
   #holdConfirmationBtnsAndMessage {
